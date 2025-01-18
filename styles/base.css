@@ -1,0 +1,150 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #004680;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+header h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+nav {
+    display:flex; /* Arranges the links in a row */
+    gap: 20px; /* Adds space between links */
+    justify-content:space-around; /* Centers the links */
+    padding: 10px; /* Adds padding around the nav */
+    background-color: black; /* Optional: Adds a background color */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Sets the text color */
+    font-weight:bold; /* Makes the links bold */
+    padding: 5px 10px; /* Adds padding inside each link */
+    border-radius: 5px; /* Rounds the edges of links */
+    transition: background-color 0.3s; /* Adds a hover effect */
+    
+}
+
+nav a:hover {
+    background-color: blue; /* Changes background on hover */
+    color: #000; /* Changes text color on hover */
+}
+nav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+nav ul li a {
+ color: #fff;
+ text-decoration: none;
+ font-size: 1.1em;
+ padding: 10px 20px;
+ border-radius: 5px;
+ transition: background-color 0.3s ease;
+}
+main {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+.card {
+    background: white;
+    padding: -2px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+
+}
+.right-img {
+    width: 120px;
+    height: auto;
+    float: right;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+.left-img {
+    width: 120px;
+    height: auto;
+    float: left;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+.image-container {
+    text-align: center;
+}
+.caption {
+    font-size: 16px;
+    color: #555;
+    margin-top: 8px;
+}
+
+.abtMe {
+    margin: 5px;
+    padding: 10px;
+}
+
+.card h2 {
+    
+    color: #004680;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #004680;
+    color: white;
+    font-size: 1em;
+    margin-top: -6px;
+    padding: 10px 30px;
+    border-bottom: 3px solid #ccc;
+    
+    
+}
+
+ul {
+    text-align: left;
+    list-style-type:circle; /* Change to 'circle', 'disc', or other types */
+    text-decoration: underline;
+
+}
+ul li {
+margin-bottom: 10px;
+}
+ul li a {
+text-decoration: none;
+color: #333;
+}
+ul li a:hover {
+text-decoration: underline;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004680;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Stack the cards on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the navigation links vertically */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Replace with your chosen Google Font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Header Styles */
+header {
+    background-color: #4b007d; /* Purple background color */
+    color: white;
+    padding: 1rem;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  /* Navigation Styles */
+  nav {
+    display: inline-block;
+    float: right;
+
+  }
+  .nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .nav-menu li {
+    display: inline;
+  }
+  
+  .nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .nav-menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin: 0.5rem 0;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-align: center;
+  }
+  
+  .nav-menu a:hover {
+    background-color: #003f75;
+  }
+  
+  /* Main Section Styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto; /* Center the main section */
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Grid Layout for Images */
+  main .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem; /* Space between grid items */
+  }
+  
+  /* Individual Figure Styles */
+  main .image-grid figure {
+    margin: 0;
+    text-align: center;
+  }
+  
+  main .image-grid img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+  }
+  
+  main .image-grid figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+/* Footer */
+footer {
+    background-color: #003f75;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+  }  
+
+  /* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .menu-button {
+    font-size: 1.2rem;
+  }
+
+  .image-card img {
+    max-width: 300px;
+  }
+
+  .image-card p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,53 @@
+/* Apply styles for larger screens */
+@media (min-width: 768px) {
+    /* Navigation */
+    .hamburger {
+      display: none;
+    }
+  
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+  
+    .nav-menu li {
+      margin: 0 1rem;
+    }
+  
+    .nav-menu a {
+      padding: 0.5rem 1.5rem;
+    }
+  
+    /* Main Content */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+  
+    .album {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+  
+    figure img {
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    figure img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    figcaption {
+      font-size: 1rem;
+    }
+  
+    /* Footer */
+    footer {
+      font-size: 0.9rem;
+    }
+  }
+  
