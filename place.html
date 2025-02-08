@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Page</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Place Title</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source src="images/Eme pic.jpeg" media="(min-width: 768px)">
+                <img src="images/Eme pic.jpeg" alt="Large Image">
+            </picture>
+        </section>
+
+        <section class="data">
+            <h2>Data</h2>
+            <p><strong>Label:</strong> Value</p>
+            <p><strong>Label:</strong> Value</p>
+            <p><strong>Label:</strong> Value</p>
+            <p><strong>Label:</strong> Value</p>
+        </section>
+
+        <section class="weather">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <p><strong>Temperature:</strong> <span id="temp">10°C</span></p>
+            <p><strong>Wind Speed:</strong> <span id="windSpeed">5 km/h</span></p>
+            <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> - Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
