@@ -1,0 +1,125 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #0045b3;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+}
+
+.logo img {
+    width: 50px; 
+    height: auto;
+    border-radius: 5px; 
+}
+
+.logo span {
+    font-size: 18px; 
+    font-weight: bold;
+    color: white; 
+}
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
+    gap: 15px; /* Adds spacing between images */
+    margin-top: 20px; /* Adds spacing above the grid */
+}
+
+.resources-grid img {
+    width: 100%; /* Ensures images take full width of grid cells */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for better appearance */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Mobile Menu Styles */
+.menu-toggle {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0056b3;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+    }
+}

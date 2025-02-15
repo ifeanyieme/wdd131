@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Section Styling */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    background: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.faq-question:hover {
+    background: #003d82;
+}
+
+.arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #f4f4f4;
+    border-left: 4px solid #0056b3;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    margin-top: 20px;
+}
