@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYU-Pathway Training Resources</title>
+    <meta name="description" content="Contact BYU-Pathway Training Resources for any inquiries or assistance.">
+    <title>Contact Us | BYU-Pathway Training Resources</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style/contact.css">
     
+    <!-- JavaScript Files -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/project.js" defer></script>
 </head>
 <body>
 
@@ -18,46 +26,45 @@
                 <li><a href="training.html">Training</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>If you have any questions, please reach out to us using the form below.</p>
+            <p>If you have any questions, feel free to reach out using the form below.</p>
 
             <div class="contact-container">
-                <form action="#" method="POST" class="contact-form">
+                <!-- Contact Form -->
+                <form action="thankyou.html" method="POST" class="contact-form">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
 
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
 
                     <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
 
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
 
+                <!-- Contact Information -->
                 <div class="contact-info">
                     <h3>Our Contact Information</h3>
-                    <p>Email: support@byupathwaytraining.org</p>
-                    <p>Phone: +1 (123) 456-7890</p>
-                    <p>Address: 123 Training Center, Accra, Ghana</p>
+                    <p><strong>Email:</strong> <a href="mailto:support@byupathwaytraining.org">support@byupathwaytraining.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+                    <p><strong>Address:</strong> 123 Training Center, Accra, Ghana</p>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
         <p>&copy; 2025 BYU-Pathway Training Resources. All rights reserved.</p>
     </footer>
-    <script src="project.js"></script>
-    <form action="thankyou.html" method="get"></form>
+
 </body>
 </html>

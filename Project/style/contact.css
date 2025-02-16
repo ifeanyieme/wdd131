@@ -15,7 +15,7 @@ header {
     text-align: center;
 }
 
-/* Basic Navigation Styles */
+/* Navigation Styles */
 nav {
     background: #0056b3; /* Dark blue background */
     padding: 10px 20px;
@@ -24,7 +24,13 @@ nav {
     justify-content: space-between;
 }
 
-/* Navigation Links */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Desktop Navigation */
 .nav-links {
     list-style: none;
     display: flex;
@@ -44,27 +50,17 @@ nav {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover Effects */
 .nav-links a:hover {
     color: #ffcc00; /* Yellow on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+    transform: scale(1.1);
 }
 
-/* Underline Effect on Hover */
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3px;
-    width: 0;
-    height: 3px;
-    background: #ffcc00; /* Yellow underline */
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-    left: 0;
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
 }
 
 /* Contact Section */
@@ -76,15 +72,18 @@ nav {
     text-align: center;
 }
 
+/* Contact Container - Responsive */
 .contact-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     gap: 20px;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
 
+/* Contact Form */
 .contact-form {
     background-color: #fff;
     padding: 20px;
@@ -103,28 +102,31 @@ nav {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
+/* Submit Button */
 .submit-button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #0056b3;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .submit-button:hover {
     background-color: #003d82;
 }
 
-/* Contact Info Section */
+/* Contact Info */
 .contact-info {
     background-color: #f4f4f4;
     padding: 20px;
@@ -140,8 +142,39 @@ nav {
 /* Footer */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: #0056b3;
     color: white;
-    margin-top: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
