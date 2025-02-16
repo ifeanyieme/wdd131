@@ -11,42 +11,201 @@ header {
     padding: 1rem;
     text-align: center;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+.hero {
+    background: linear-gradient(to right, #0056b3, #003d80);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
 }
+
+.hero-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* ============================= */
+/* TRAINING SECTION */
+/* ============================= */
+#training {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#training h2 {
+    font-size: 28px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+#training p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Training Navigation */
+.training-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.training-nav a {
+    text-decoration: none;
+    background: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.training-nav a:hover {
+    background: #004494;
+}
+
+/* Training Grid */
+.training-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Training Cards */
+.training-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Training Icons */
+.icon {
+    font-size: 40px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+/* Training Titles */
+.training-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Training Descriptions */
+.training-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background: #0056b3;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #004494;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .training-nav {
+        flex-direction: column;
+    }
+}
+
+/* Basic Navigation Styles */
+nav {
+    background: #0056b3; /* Dark blue background */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
-.nav-links li a {
-    color: white;
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
     text-decoration: none;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: white;
+
+/* Hover Effects */
+.nav-links a:hover {
+    color: #ffcc00; /* Yellow on hover */
+    transform: scale(1.1); /* Slight zoom effect */
 }
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #0056b3;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+
+/* Underline Effect on Hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: #ffcc00; /* Yellow underline */
+    transition: width 0.3s ease, left 0.3s ease;
 }
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 8px;
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
 }
+
 footer {
     text-align: center;
     padding: 10px;
@@ -54,33 +213,4 @@ footer {
     color: white;
     margin-top: 20px;
 }
-.training-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-}
-.training-nav a {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.training-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.training-card {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
-.training-card h3 {
-    color: #0056b3;
-}
+

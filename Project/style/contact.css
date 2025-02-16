@@ -15,27 +15,56 @@ header {
     text-align: center;
 }
 
+/* Basic Navigation Styles */
 nav {
+    background: #0056b3; /* Dark blue background */
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    justify-content: space-between;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.nav-links li {
+    position: relative;
 }
 
-.nav-links li a:hover {
-    text-decoration: underline;
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects */
+.nav-links a:hover {
+    color: #ffcc00; /* Yellow on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Underline Effect on Hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: #ffcc00; /* Yellow underline */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 /* Contact Section */

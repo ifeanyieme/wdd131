@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Header and Navigation */
+/* Header */
 header {
     background-color: #0056b3;
     color: white;
@@ -15,71 +15,138 @@ header {
     text-align: center;
 }
 
+/* Navigation */
 nav {
+    background: #0056b3;
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    justify-content: space-between;
+    position: relative;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.nav-links li a {
-    color: white;
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
     text-decoration: none;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-links li a:hover {
-    text-decoration: underline;
+/* Hover Effects */
+.nav-links a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #0056b3;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px;
+        font-size: 16px;
+    }
 }
 
 /* Resources Section */
 #resources {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    margin: 20px;
-    text-align: center;
 }
 
-.resources-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.resource-card {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
-
-.resource-card h3 {
+#resources h2 {
+    font-size: 28px;
     color: #0056b3;
+    margin-bottom: 10px;
 }
 
-/* Button Styling */
+#resources p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Responsive Grid for Resources */
+.resources-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Resource Cards */
+.resource-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* CTA Button */
 .cta-button {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #0056b3;
+    background: #0056b3;
     color: white;
     text-decoration: none;
+    padding: 10px 15px;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #003d82;
+    background: #004494;
 }
 
 /* Footer */

@@ -3,80 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYU-Pathway Training Resources</title>
+    <title>BYU-Pathway Training Resources | FAQ</title>
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/faq.css">
-</head>
-<body>
 
+</head>
+
+
+    <!-- Header & Navigation -->
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="logo">
-                <img src="images/logo.png" alt="BYU-Pathway Training Logo">
+                <img src="images/byu 1.jpeg" alt="BYU-Pathway Training Logo">
                 <span>BYU-Pathway Training</span>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="training.html">Training</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
-
         <section id="faq">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-container">
-        
+
+                <!-- FAQ Items -->
                 <div class="faq-item">
-                    <button class="faq-question">How can I access training materials? <span class="arrow">&#x25BC;</span></button>
+                    <button class="faq-question">
+                        How can I access training materials? <span class="arrow">&#x25BC;</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>You can access all training materials in the <a href="resources.html">Resources</a> section. PDF manuals, videos, and slides are available for download.</p>
+                        <p>All training materials are available in the <a href="resources.html">Resources</a> section. You can download PDFs, watch videos, and access slides.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
-                    <button class="faq-question">Where can I find referral forms? <span class="arrow">&#x25BC;</span></button>
+                    <button class="faq-question">
+                        Where can I find referral forms? <span class="arrow">&#x25BC;</span>
+                    </button>
                     <div class="faq-answer">
                         <p>Referral forms are located under the <a href="resources.html">Resources</a> section. You can fill them out and submit them online.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
-                    <button class="faq-question">Who do I contact for additional support? <span class="arrow">&#x25BC;</span></button>
+                    <button class="faq-question">
+                        Who do I contact for additional support? <span class="arrow">&#x25BC;</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>If you need further assistance, visit the <a href="contact.html">Contact</a> section to reach out to a support representative.</p>
+                        <p>For further assistance, visit the <a href="contact.html">Contact</a> page to reach a support representative.</p>
                     </div>
                 </div>
-        
-                <!-- Additional Questions -->
+
                 <div class="faq-item">
-                    <button class="faq-question">How do I reset my account password? <span class="arrow">&#x25BC;</span></button>
+                    <button class="faq-question">
+                        How do I reset my account password? <span class="arrow">&#x25BC;</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>To reset your password, go to the login page and click on 'Forgot Password'. Follow the instructions to reset it.</p>
+                        <p>Go to the login page and click 'Forgot Password'. Follow the instructions to reset your password.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
-                    <button class="faq-question">Can I access training on my mobile device? <span class="arrow">&#x25BC;</span></button>
+                    <button class="faq-question">
+                        Can I access training on my mobile device? <span class="arrow">&#x25BC;</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Yes! All training materials are mobile-friendly and can be accessed via your smartphone or tablet.</p>
+                        <p>Yes! All training materials are mobile-friendly and accessible via smartphones and tablets.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
-                    <button class="faq-question">Are there live training sessions available? <span class="arrow">&#x25BC;</span></button>
+                    <button class="faq-question">
+                        Are there live training sessions available? <span class="arrow">&#x25BC;</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Yes! You can check the <a href="training.html">Training</a> section for upcoming live training sessions and registration details.</p>
+                        <p>Yes! Check the <a href="training.html">Training</a> section for upcoming live sessions and registration details.</p>
                     </div>
                 </div>
-        
+
             </div>
         </section>
-        <script src="scripts/faq.js"></script>
-        <script src="scripts/project.js"></script>
-
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> BYU-Pathway Training Resources. All rights reserved.</p>
+        <p>Developed by Ifeanyi Eme, Abia State, Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/faq.js"></script>
+    <script src="scripts/project.js"></script>
+
+</body>
+</html>

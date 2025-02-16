@@ -1,58 +1,31 @@
-// Wait for the document to load before running scripts
 document.addEventListener("DOMContentLoaded", function () {
+    // Select elements
+    const menuToggle = document.querySelector(".menu-toggle");
 
-    // Mobile Navigation Toggle
-    const menuToggle = document.createElement("button");
-    menuToggle.innerHTML = "☰";
-    menuToggle.classList.add("menu-toggle");
 
-    const nav = document.querySelector("nav");
-    const navLinks = document.querySelector(".nav-links");
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
 
-    // Add the toggle button for small screens
-    nav.insertBefore(menuToggle, nav.firstChild);
-
-    menuToggle.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-    });
+            // Toggle aria-expanded for accessibility
+            const isActive = navLinks.classList.contains("active");
+            menuToggle.setAttribute("aria-expanded", isActive);
+        });
+    }
 
     // Smooth Scrolling for Navigation Links
     document.querySelectorAll("a[href^='#']").forEach(anchor => {
         anchor.addEventListener("click", function (e) {
-            e.preventDefault();
             const target = document.querySelector(this.getAttribute("href"));
-            target.scrollIntoView({ behavior: "smooth" });
+            
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth" });
+            }
         });
     });
-
-    // Form Validation
-    const contactForm = document.querySelector(".contact-form");
-
-    if (contactForm) {
-        contactForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            if (name === "" || email === "" || message === "") {
-                alert("Please fill in all fields before submitting.");
-                return;
-            }
-
-            // Simple email validation
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                alert("Please enter a valid email address.");
-                return;
-            }
-
-            alert("Your message has been sent successfully!");
-            contactForm.reset();
-        });
-    }
 });
+
 // JavaScript for FAQ Accordion
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
@@ -65,3 +38,48 @@ document.querySelectorAll('.faq-question').forEach(button => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+        item.querySelector(".faq-question").addEventListener("click", function () {
+            // Close all other FAQ items
+            faqItems.forEach((faq) => {
+                if (faq !== item) faq.classList.remove("active");
+            });
+
+            // Toggle current FAQ item
+            item.classList.toggle("active");
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    // Mobile Navigation Toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // FAQ Accordion Functionality
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+            item.classList.toggle("active");
+
+            // Close other open FAQs (optional)
+            faqItems.forEach((otherItem) => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove("active");
+                }
+            });
+        });
+    });
+});
+
+
